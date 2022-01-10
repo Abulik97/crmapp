@@ -1,0 +1,9 @@
+{% extends 'base.html'%}{% load tailwind_filters %} {%block content %}<a href="{% url 'agents:agent_list' %}">Umumi agentler sehifesine qayit</a>
+<hr>
+<h1>Yeni Agent Yarat</h1>
+<form action="" method="post">
+    {% csrf_token%} {{form|crispy}}
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock content %}

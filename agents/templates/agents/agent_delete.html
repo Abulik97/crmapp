@@ -1,0 +1,9 @@
+{% extends 'base.html'%} {% load tailwind_filters %}{%block content %}<a href="{% url 'agents:agent_list' %}">Back to previous page</a>
+<hr>
+<h1>Silmək istədiyinizə əminsiz?</h1>
+<form action="" method="post">
+    {% csrf_token%} {{form.crispy}}
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock content %}

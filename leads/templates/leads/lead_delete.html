@@ -1,0 +1,9 @@
+{% extends 'base.html'%} {%block content %}<a href="{% url 'leads:lead_list' %}">Back to previous page</a>
+<hr>
+<h1>Silmək istədiyinizə əminsiz?</h1>
+<form action="" method="post">
+    {% csrf_token%} {{form.as_p}}
+    <button type="submit">Submit</button>
+
+</form>
+{% endblock content %}
